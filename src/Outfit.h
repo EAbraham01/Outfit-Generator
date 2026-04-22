@@ -15,10 +15,21 @@ private:
     ClothingItem* shoes;
     string style;
     
-    bool hasTop;
-    bool hasBottom;
-    bool hasShoes;
-    
-    
+public:
+    Outfit();
+    Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, string style);
+    void setTop(ClothingItem* t);
+    void setBottom(ClothingItem* b);
+    void setShoes(ClothingItem* s);
+    void getTop() const;
+    void getBottom() const;
+    void getShoes() const;
+    bool complete() const;
+    bool hasTop() const;
+    bool hasBottom() const;
+    bool hasShoes() const;
+    void display() const;
     
 }
+
+#endif
