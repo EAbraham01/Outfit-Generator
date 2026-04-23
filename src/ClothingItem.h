@@ -35,8 +35,8 @@ public:
     string getCategory() const;
     string getBrand() const;
     string getWeather(); const;
-    int getID(); const;
+    int getID() const;
     void printItem() const;
-}
+};
 
 #endif

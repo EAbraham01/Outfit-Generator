@@ -30,6 +30,6 @@ public:
     bool hasShoes() const;
     void display() const;
     
-}
+};
 
 #endif
