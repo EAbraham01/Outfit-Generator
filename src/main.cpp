@@ -1,4 +1,9 @@
 #include <iostream>
+#include "ClothingItem.h"
+#include "Outfit.h"
+#include "Wardrobe.h"
+#include "User.h"
+#include "RecommendationSystem.h"
 
 using namespace std;
 
@@ -6,15 +11,37 @@ void displayMenu();
 
 int main(){
     int choice;
-    bool runnning = true;
+    bool running = true;
     
     while (running) {
         displayMenu();
         cin >> choice;
         
         if (choice == 1){
+            Wardrobe w;
+            string name;
+            string style;
+            string color;
+            double price;
+            string category;
+            string brand;
+            cout << "Please enter the details of your clothing item: " << endl;
+            cout << "Name: ";
+            cin >> name;
+            cout << "Style: ";
+            cin >> style;
+            cout << "Color: ";
+            cin >> color;
+            cout << "Price: ";
+            cin >> price;
+            cout << "Category: ";
+            cin >> category;
+            cout << "Brand: ";
+            cin >> brand;
+            ClothingItem c(name, style, color, price, category, brand);
+            w.addItem(c);
             // TODO: Get details of clothing item from user and create object
-            // TODO: Add clothing item to wardrobe
+            // TODO: Add clothing item to wardrobe`
         }
         else if(choice == 2){
             // TODO: Generate a full outfit based on user preferences
@@ -50,7 +77,7 @@ int main(){
         
     }
     return 0;
-}
+};
 
 
 void displayMenu(){
