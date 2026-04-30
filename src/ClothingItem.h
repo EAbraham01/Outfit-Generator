@@ -1,6 +1,8 @@
 #ifndef CLOTHINGITEM_H
 #define CLOTHINGITEM_H
 
+
+
 #include <string>
 #include <vector>
 
@@ -10,33 +12,34 @@
 
 class ClothingItem{
 private:
-    string name;
-    string style;
-    string color;
+    std::string name;
+    std::string style;
+    std::string color;
     double price;
-    string category;
-    string brand;
-    string weather;
-    int ID;
+    std::string category;
+    std::string brand;
+    //string weather;
+    //int ID;
 public:
-    ClothingItem(string name, string style, string color, double price, string category, string brand);
-    string setName() const;
-    string setStyle() const;
-    string setColor() const;
-    double setPrice() const;
-    string setCategory() const;
-    string setBrand() const;
-    string setWeather() const;
-    int setID() const;
-    string getName() const;
-    string getStyle() const;
-    string getColor() const;
+    ClothingItem(std::string name, std::string style, std::string color, double price, std::string category, std::string brand);
+    //string setName(string name) const;
+    //string setStyle(string ) const;
+    //string setColor() const;
+    //double setPrice() const;
+    //string setCategory() const;
+    //string setBrand() const;
+    //string setWeather() const;
+    //int setID() const;
+    std::string getName() const;
+    std::string getStyle() const;
+    std::string getColor() const;
     double getPrice() const;
-    string getCategory() const;
-    string getBrand() const;
-    string getWeather(); const;
-    int getID() const;
+    std::string getCategory() const;
+    std::string getBrand() const;
+    //string getWeather(); const;
+    //int getID() const;
     void printItem() const;
+    bool operator==(const ClothingItem& other) const;
 };
 
 #endif

@@ -3,16 +3,18 @@
 
 #include <string>
 #include <vector>
+#include "Wardrobe.h"
+#include "Outfit.h"
 
 /*
  RecommendationSystem class will help the user create outfits from user input.
  */
-class Recipe {
+class RecommendationSystem {
 private:
     Wardrobe& wardrobe;
     User& user;
     
-    ClothingItem random(vector<ClothingItem>& items);
+    ClothingItem random(std::vector<ClothingItem>& items);
     
 
 public:

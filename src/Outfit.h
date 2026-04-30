@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "ClothingItem.h"
 
 /*
  Outfit class represents a single outfit generated which has a top, bottom, shoes. (May add accessories).
@@ -13,11 +14,11 @@ private:
     ClothingItem* top;
     ClothingItem* bottom;
     ClothingItem* shoes;
-    string style;
+    std::string style;
     
 public:
     Outfit();
-    Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, string style);
+    Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, std::string style);
     void setTop(ClothingItem* t);
     void setBottom(ClothingItem* b);
     void setShoes(ClothingItem* s);
