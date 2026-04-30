@@ -6,22 +6,22 @@ set (CMAKE_CXX_STANDARD_REQUIRED True)
 
 enable_testing()
 
-# (uncomment and add files as you create them)
-# add_library(outfit_lib
-#     src/ClothingItem.cpp
-#     src/Outfit.cpp
-#     src/User.cpp
-#     src/Wardrobe.cpp
-#     src/RecommendationSystem.cpp
-# )
+#(uncomment and add files as you create them)
+ add_library(outfit_lib
+     src/ClothingItem.cpp
+     src/Outfit.cpp
+     src/User.cpp
+     src/Wardrobe.cpp
+     src/RecommendationSystem.cpp
+)
 
 # Create main executable
 add_executable(outfit_app src/main.cpp)
-# target_link_libraries(outfit_app outfit_lib)
+target_link_libraries(outfit_app outfit_lib)
 
 # Create test executable
-# add_executable(tests tests/test_main.cpp)
-# target_link_libraries(tests outfit_lib)
+add_executable(tests tests/test_main.cpp)
+target_link_libraries(tests outfit_lib)
 
 # Register tests with CTest
-# add_test(NAME OutfitTests COMMAND tests)
+add_test(NAME OutfitTests COMMAND tests)

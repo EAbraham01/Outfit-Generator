@@ -2,6 +2,8 @@
 #include <cassert>
 #include "../src/RecommendationSystem.h"
 
+using namespace std;
+
 void test_clothing_item_initialzation() {
     // TODO: Create a ClothingItem object and verify attributes
     // ClothingItem item("Jacket", "casual", "blue", 40.0, "top", "Nike"
@@ -11,13 +13,37 @@ void test_clothing_item_initialzation() {
     // assert(item.getPrice() == "40.0");
 }
 
-void test_wardrobe_add_item() {
+void test_add_item_normal() {
     // TODO: Test adding items to wardrobe
-    // Wardrobe w;
-    // ClothingItem item("AirForces", "casual", "white", 20.0, "shoes", "Nike);
-    // w.addItem(item);
+    cout << "Normal Operation..." << endl;
+    Wardrobe w;
+    ClothingItem wShoe("AirForces", "casual", "white", 20.0, "shoes", "Nike");
+    w.addItem(wShoe);
+    assert(wShoe.getName() == "AirForces");
+    assert(wShoe.getStyle() == "casual");
+    assert(wShoe.getColor() == "white");
+    assert(wShoe.getCategory() == "shoes");
+    assert(wShoe.getBrand() == "Nike");
+    assert(w.getItemCount() == 1);
+    cout << "PASSED" << endl;
+}
+
+void test_add_item_empty(){
+    Wardrobe e;
+    cout << "Testing empty wardrobe" << endl;
+    assert(e.getItemCount() == 0);
+    cout << "PASSED" << endl;
+}
+
+void test_removing_item(){
+    cout << "Test removing an item..." << endl;
+    Wardrobe r;
+    ClothingItem wShoe("AirForces", "casual", "white", 20.0, "shoes", "Nike");
+    r.addItem(wShoe);
+    assert(r.getItemCount() == 1);
+    r.removeItem(wShoe);
+    assert(r.getItemCount() == 0);
     
-    // assert(w.getItems().size() == 1);
 }
 
 void test_outfit_recommendation(){
@@ -32,9 +58,9 @@ void test_outfit_recommendation(){
 int main() {
     cout << "Running tests..." << endl;
     
-    test_clothing_item_initialization();
-    tesst_wardrobe_add_item();
-    test_outfit_recommendaation();
+    test_add_item_normal();
+    test_add_item_empty();
+    test_removing_item();
     
     cout << endl << "All tests completed." << endl;
     return 0;
