@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include "User.h"
+#include "Outfit.h"
 
 /*
  Wardrobe class holds all of the clothingitem objects.
@@ -10,20 +12,22 @@
 
 class Wardrobe {
 private:
-    vector <ClothingItem> items;
+    std::vector <ClothingItem> items;
+    int itemCount;
 
 public:
     Wardrobe();
     void addItem(const ClothingItem& item);
-    void removeItem(string name);
-    vector<ClothingItem>> getItems();
-    vector<ClothingItem>> getItemsbyCategory();
-    vector<ClothingItem>> getItemsByBrand();
-    vector<ClothingItem>> getItemsByStyle();
-    vector<ClothingItem>> getItemsByBrand();
-    vector<ClothingItem>> getItemsByWeather();
-    vector<ClothingItem>> getItemsByColor();
-    ClothingItem getRandomItem(string category);
+    void removeItem(const ClothingItem& item);
+    std::vector<ClothingItem> getItems();
+    std::vector<ClothingItem> getItemsbyCategory();
+    std::vector<ClothingItem> getItemsByPrice();
+    std::vector<ClothingItem> getItemsByStyle();
+    std::vector<ClothingItem> getItemsByBrand();
+    std::vector<ClothingItem> getItemsByWeather();
+    std::vector<ClothingItem> getItemsByColor();
+    ClothingItem getRandomItem(std::string category);
+    int getItemCount() const;
     
 };
 
