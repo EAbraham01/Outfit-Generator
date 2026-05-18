@@ -12,13 +12,13 @@ void displayMenu();
 int main(){
     int choice;
     bool running = true;
+    Wardrobe w;
     
     while (running) {
         displayMenu();
         cin >> choice;
         
         if (choice == 1){
-            Wardrobe w;
             string name;
             int style;
             int color;
@@ -44,9 +44,7 @@ int main(){
             // TODO: Add clothing item to wardrobe`
         }
         else if(choice == 2){
-            // TODO: Generate a full outfit based on user preferences
-            // TODO: Use generaateOutfitWithPreferences() function
-            // TODO: Display outfit
+            w.display();
         }
         else if(choice == 3){
             // TODO: Ask user for a specific clothing item
@@ -83,12 +81,13 @@ int main(){
 void displayMenu(){
     cout << endl << "=== Outfit Generator ===" << endl;
     cout << "1. Add Clothing Item" << endl;
-    cout << "2. Generate Outfit Through Preference" << endl;
-    cout << "3. Generate Outfit from Singular Item" << endl;
-    cout << "4. Improve Outfit" << endl;
-    cout << "5. Recommend Brands" << endl;
-    cout << "6. Display Wardrobe" << endl;
+    cout << "2. Display Wardrobe" << endl;
+    cout << "3. Generate Outfit Through Preference" << endl;
+    cout << "4. Generate Outfit from Singular Item" << endl;
+    cout << "5. Improve Outfit" << endl;
+    cout << "6. Recommend Brands" << endl;
     cout << "7. Update Preferences" << endl;
-    cout << "8. Exit" << endl;
+    cout << "8. Save/Load" << endl;
+    cout << "9. Exit" << endl;
     cout << "Choice: ";
 }
