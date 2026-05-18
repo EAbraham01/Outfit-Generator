@@ -9,25 +9,25 @@
  */
 class User {
 private:
-    std::string prefStyle;
-    std::string prefColor;
+    Style prefStyle;
+    Color prefColor;
     std::string prefBrand;
-    std::string prefWeather;
+    //std::string prefWeather;
     double budget;
 
 public:
-    User(std::string prefStyle, std::string prefColor, std::string prefBrand, std::string prefWeather, double budget);
+    User(Style prefStyle, Color prefColor, std::string prefBrand, double budget);
 
-    std::string getPrefStyle() const;
-    std::string getPrefColor() const;
+    Style getPrefStyle() const;
+    Color getPrefColor() const;
     std::string getPrefBrand() const;
     std::string getPrefWeather() const;
-    std::string getBudget() const;
+    double getBudget() const;
     
-    void setPrefStyle(std::string style);
-    void setPrefColor(std::string color);
+    void setPrefStyle(Style style);
+    void setPrefColor(Color color);
     void setPrefBrand(std::string brand);
-    void setPrefWeather(std::string weather);
+    //void setPrefWeather(std::string weather);
     void setBudget(double budget);
 };
 

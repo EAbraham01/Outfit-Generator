@@ -45,7 +45,7 @@ std::vector<ClothingItem> Wardrobe::getItemsByColor(){
     return {};
 }
 ClothingItem Wardrobe::getRandomItem(std::string category){
-    return ClothingItem("", "", "", 0.0, "", "");
+    return ClothingItem("", Casual, Red, 0.0, Top, "");
 }
 
 int Wardrobe::getItemCount() const{

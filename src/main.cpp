@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include "ClothingItem.h"
 #include "Outfit.h"
 #include "Wardrobe.h"
@@ -20,25 +20,25 @@ int main(){
         if (choice == 1){
             Wardrobe w;
             string name;
-            string style;
-            string color;
+            int style;
+            int color;
             double price;
-            string category;
+            int category;
             string brand;
             cout << "Please enter the details of your clothing item: " << endl;
             cout << "Name: ";
             cin >> name;
-            cout << "Style: ";
+            cout << "Style (0=Casual, 1=Formal, 2=Sporty, 3=Streetwear, 4=Vintage): ";
             cin >> style;
-            cout << "Color: ";
+            cout << "Color (0=Red, 1=Blue, 2=Green, 3=Yellow, 4=Black, 5=White, 6=Gray, 7=Brown, 8=Pink, 9=Purple, 10=Orange): ";
             cin >> color;
             cout << "Price: ";
             cin >> price;
-            cout << "Category: ";
+            cout << "Category (0=Top, 1=Bottom, 2=Shoes): ";
             cin >> category;
             cout << "Brand: ";
             cin >> brand;
-            ClothingItem c(name, style, color, price, category, brand);
+            ClothingItem c(name, static_cast<Style>(style), static_cast<Color>(color), price, static_cast<Category>(category), brand);
             w.addItem(c);
             // TODO: Get details of clothing item from user and create object
             // TODO: Add clothing item to wardrobe`

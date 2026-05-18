@@ -26,7 +26,7 @@ public:
     std::vector<ClothingItem> getItemsByBrand();
     std::vector<ClothingItem> getItemsByWeather();
     std::vector<ClothingItem> getItemsByColor();
-    ClothingItem getRandomItem(std::string category);
+    ClothingItem getRandomItem(Category category);
     int getItemCount() const;
     
 };
