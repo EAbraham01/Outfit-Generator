@@ -3,7 +3,7 @@
 
 Outfit::Outfit() : top(nullptr), bottom(nullptr), shoes(nullptr), style(Casual){};
 
-Outfit::Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style) : top(t), bottom(b), style(style){};
+Outfit::Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style) : top(t), bottom(b), shoes(s), style(style){};
 
 void Outfit::setTop(ClothingItem* t){
     std::cout << "[Outfit::setTop] not yet implemented\n";

@@ -14,11 +14,11 @@ private:
     ClothingItem* top;
     ClothingItem* bottom;
     ClothingItem* shoes;
-    std::string style;
+    Style style;
     
 public:
     Outfit();
-    Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, std::string style);
+    Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style);
     void setTop(ClothingItem* t);
     void setBottom(ClothingItem* b);
     void setShoes(ClothingItem* s);

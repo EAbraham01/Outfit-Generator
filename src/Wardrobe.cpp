@@ -44,13 +44,26 @@ std::vector<ClothingItem> Wardrobe::getItemsByColor(){
     //TODO: Implement later
     return {};
 }
-ClothingItem Wardrobe::getRandomItem(std::string category){
+ClothingItem Wardrobe::getRandomItem(Category category){
     return ClothingItem("", Casual, Red, 0.0, Top, "");
 }
 
 int Wardrobe::getItemCount() const{
     return itemCount;
 };
+
+std::string Wardrobe::display() const{
+    if(items.empty()){
+        std::cout << std::endl;
+        return "Your wardrobe is empty.";
+    }
+    for (int i = 0; i < items.size(); i++){
+        std::cout << "Item " << i + 1 << ":" << std::endl;
+        items[i].printItem();
+    }
+    std::cout << std::endl;
+    return "End of Wardrobe.";
+}
 
 
 

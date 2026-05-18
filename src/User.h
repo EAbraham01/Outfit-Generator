@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "ClothingItem.h"
 
 /*
  User class represents the preferences set by the user so they could create their outfits.

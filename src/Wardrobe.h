@@ -28,6 +28,7 @@ public:
     std::vector<ClothingItem> getItemsByColor();
     ClothingItem getRandomItem(Category category);
     int getItemCount() const;
+    std::string display() const;
     
 };
 
