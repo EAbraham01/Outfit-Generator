@@ -1,43 +1,59 @@
 #ifndef CLOTHINGITEM_H
 #define CLOTHINGITEM_H
 
-
-
 #include <string>
-#include <vector>
 
 /*
  ClothingItem class which represents a component of an outfit, which includes style, color, price, and name.
  */
 
+ enum Style {
+    Casual,
+    Formal,
+    Sporty,
+    Streetwear,
+    Vintage
+};
+
+enum Category {
+    Top,
+    Bottom,
+    Shoes
+};
+
+enum Color {
+    Red,
+    Blue,
+    Green,
+    Yellow,
+    Black,
+    White,
+    Gray,
+    Brown,
+    Pink,
+    Purple,
+    Orange
+};
+
 class ClothingItem{
 private:
     std::string name;
-    std::string style;
-    std::string color;
+    Style style;
+    Color color;
     double price;
-    std::string category;
+    Category category;
     std::string brand;
-    //string weather;
-    //int ID;
 public:
-    ClothingItem(std::string name, std::string style, std::string color, double price, std::string category, std::string brand);
-    //string setName(string name) const;
-    //string setStyle(string ) const;
-    //string setColor() const;
-    //double setPrice() const;
-    //string setCategory() const;
-    //string setBrand() const;
-    //string setWeather() const;
-    //int setID() const;
+    ClothingItem(const std::string& name, Style style, Color color, double price, Category category, const std::string& brand);
     std::string getName() const;
-    std::string getStyle() const;
-    std::string getColor() const;
+    Style getStyle() const;
+    Color getColor() const;
     double getPrice() const;
-    std::string getCategory() const;
+    Category getCategory() const;
     std::string getBrand() const;
-    //string getWeather(); const;
-    //int getID() const;
+    std::string styleToString(Style style) const;
+    std::string colorToString(Color color) const;
+    std::string categoryToString(Category category) const;
     void printItem() const;
     bool operator==(const ClothingItem& other) const;
 };
