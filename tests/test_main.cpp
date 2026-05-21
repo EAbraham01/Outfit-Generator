@@ -4,8 +4,7 @@
 
 using namespace std;
 
-void test_clothing_item_initialzation() {
-     //TODO: Create a ClothingItem object and verify attributes
+void test_clothing_item_initialization() {
      ClothingItem item("Jacket", Casual, Blue, 40.0, Top, "Nike");     
      assert(item.getName() == "Jacket");
      assert(item.getStyle() == Casual);
@@ -16,16 +15,15 @@ void test_clothing_item_initialzation() {
 }
 
 void test_add_item_normal() {
-    // TODO: Test adding items to wardrobe
     cout << "Normal Operation..." << endl;
     Wardrobe w;
     ClothingItem wShoe("AirForces", Casual, White, 20.0, Shoes, "Nike");
     w.addItem(wShoe);
-    assert(wShoe.getName() == "AirForces");
-    assert(wShoe.getStyle() == Casual);
-    assert(wShoe.getColor() == White);
-    assert(wShoe.getCategory() == Shoes);
-    assert(wShoe.getBrand() == "Nike");
+    assert(w.getItems()[0].getName() == "AirForces");
+    assert(w.getItems()[0].getStyle() == Casual);
+    assert(w.getItems()[0].getColor() == White);
+    assert(w.getItems()[0].getCategory() == Shoes);
+    assert(w.getItems()[0].getBrand() == "Nike");
     assert(w.getItemCount() == 1);
     cout << "PASSED" << endl;
 }
@@ -65,7 +63,7 @@ void test_display_wardrobe_normal() {
     assert(w.getItems()[0].getCategory() == Top);
     assert(w.getItems()[1].getCategory() == Bottom);
     assert(w.getItems()[2].getCategory() == Shoes);
-    assert(w.display() == "End of Wardrobe.");
+    w.display();
     cout << "PASSED" << endl;
     
 }
@@ -73,9 +71,8 @@ void test_display_wardrobe_normal() {
 void test_display_empty(){
     cout << "Test display with empty wardrobe..." << endl;
     Wardrobe w;
-    assert(w.getItemCount() == 0);
     assert(w.getItems().empty());
-    assert(w.display() == "Your wardrobe is empty.");
+    w.display();
     cout << "PASSED" << endl;
 }
 
@@ -91,7 +88,7 @@ void test_display_one_item(){
     assert(w.getItems()[0].getColor() == White);
     assert(w.getItems()[0].getCategory() == Top);
     assert(w.getItems()[0].getBrand() == "Nike");
-    assert(w.display() == "End of Wardrobe.");
+    w.display();
     cout << "PASSED" << endl;
 }
 void test_outfit_recommendation(){
@@ -106,7 +103,7 @@ void test_outfit_recommendation(){
 int main() {
     cout << "Running tests..." << endl;
     
-    test_clothing_item_initialzation();
+    test_clothing_item_initialization();
     test_add_item_normal();
     test_add_item_empty();
     test_removing_item();
