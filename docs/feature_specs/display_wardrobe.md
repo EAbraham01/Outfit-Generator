@@ -21,7 +21,6 @@ A user can view all the current clothing items that are stored in their wardrobe
 - Empty wardrobe (no items)
 - Wardrobe has exactly one item
 - Wardrobe has a large number of items
-- Empty new name (should be rejected).
  
 ## Three tests (English version)
 - Normal: A wardrobe with three items (a top, bottom, and shoes) displays all attributes correctly.
