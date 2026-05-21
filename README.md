@@ -33,9 +33,9 @@ Eminadab Abraham - CIS 25 Final Project
  
 **Implemented Features**:
 - Feature 1: Adding Clothing Item, which adds a clothing item to a wardrobe and the attributes of the clothingitem are created by the user.
+- Feature 2: Displaying Wardrobe
  
 **Stubbed (compile but not implemented)**:
-- Feature 2: Displaying Wardrobe
 - Feature 3: Generate full outfit based on user preference
 - Feature 4: Generate the rest of an outfit based on the clothing items already given
 - Feature 5: Suggesting different items to improve the outfit
