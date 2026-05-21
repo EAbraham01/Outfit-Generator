@@ -13,22 +13,20 @@
 class Wardrobe {
 private:
     std::vector <ClothingItem> items;
-    int itemCount;
 
 public:
     Wardrobe();
     void addItem(const ClothingItem& item);
-    void removeItem(const ClothingItem& item);
-    std::vector<ClothingItem> getItems();
-    std::vector<ClothingItem> getItemsbyCategory();
+    bool removeItem(const ClothingItem& item);
+    const std::vector<ClothingItem>& getItems() const;
+    std::vector<ClothingItem> getItemsByCategory();
     std::vector<ClothingItem> getItemsByPrice();
     std::vector<ClothingItem> getItemsByStyle();
     std::vector<ClothingItem> getItemsByBrand();
-    std::vector<ClothingItem> getItemsByWeather();
     std::vector<ClothingItem> getItemsByColor();
     ClothingItem getRandomItem(Category category);
     int getItemCount() const;
-    std::string display() const;
+    void display() const;
     
 };
 

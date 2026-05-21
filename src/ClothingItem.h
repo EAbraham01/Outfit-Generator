@@ -1,10 +1,7 @@
 #ifndef CLOTHINGITEM_H
 #define CLOTHINGITEM_H
 
-
-
 #include <string>
-#include <vector>
 
 /*
  ClothingItem class which represents a component of an outfit, which includes style, color, price, and name.
@@ -46,21 +43,17 @@ private:
     double price;
     Category category;
     std::string brand;
-    //string weather;
-    //int ID;
 public:
-    ClothingItem(std::string name, Style style, Color color, double price, Category category, std::string brand);
+    ClothingItem(const std::string& name, Style style, Color color, double price, Category category, const std::string& brand);
     std::string getName() const;
     Style getStyle() const;
     Color getColor() const;
     double getPrice() const;
     Category getCategory() const;
     std::string getBrand() const;
-    static std::string styleToString(Style style);
-    static std::string colorToString(Color color);
-    static std::string categoryToString(Category category);
-    //string getWeather(); const;
-    //int getID() const;
+    std::string styleToString(Style style) const;
+    std::string colorToString(Color color) const;
+    std::string categoryToString(Category category) const;
     void printItem() const;
     bool operator==(const ClothingItem& other) const;
 };

@@ -1,32 +1,8 @@
 #include "ClothingItem.h"
 #include <iostream>
 
-ClothingItem::ClothingItem(std::string name, Style style, Color color, double price, Category category, std::string brand) : name(name), style(style), color(color), price(price), category(category), brand(brand){};
+ClothingItem::ClothingItem(const std::string& name, Style style, Color color, double price, Category category, const std::string& brand) : name(name), style(style), color(color), price(price), category(category), brand(brand){};
 
-/*void ClothingItem::setName() const{
-    std::cout << "[ClothingItem::setName] not yet implemented" << endl;
-}
-void ClothingItem::setStyle() const{
-    std::cout << "[ClothingItem::setStyle] not yet implemented" << endl;
-}
-void ClothingItem::setColor() const{
-    std::cout << "[ClothingItem::setColor] not yet implemented" << endl;
-}
-void ClothingItem::setPrice() const{
-    std::cout << "[ClothingItem::setPrice] not yet implemented" << endl;
-}
-void ClothingItem::setCategory() const{
-    std::cout << "[ClothingItem::setCategory] not yet implemented" << endl;
-}
-void ClothingItem::setBrand() const{
-    std::cout << "[ClothingItem::setBrand] not yet implemented" << endl;
-}
-void ClothingItem::setWeather() const{
-    std::cout << "[ClothingItem::setWeather] not yet implemented" << endl;
-}
-void ClothingItem::setID() const{
-    std::cout << "[ClothingItem::setID] not yet implemented" << endl;
-}*/
 std::string ClothingItem::getName() const{
     return name;
 }
@@ -46,7 +22,7 @@ std::string ClothingItem::getBrand() const{
     return brand;
 }
 
-std::string ClothingItem::styleToString(Style style){
+std::string ClothingItem::styleToString(Style style) const{
     switch(style){
         case Casual: return "Casual";
         case Formal: return "Formal";
@@ -57,7 +33,7 @@ std::string ClothingItem::styleToString(Style style){
     }
 }
 
-std::string ClothingItem::colorToString(Color color){
+std::string ClothingItem::colorToString(Color color) const{
     switch(color){
         case Red: return "Red";
         case Blue: return "Blue";
@@ -74,7 +50,7 @@ std::string ClothingItem::colorToString(Color color){
     }
 }
 
-std::string ClothingItem::categoryToString(Category category){
+std::string ClothingItem::categoryToString(Category category) const{
     switch(category){
         case Top: return "Top";
         case Bottom: return "Bottom";
@@ -83,9 +59,6 @@ std::string ClothingItem::categoryToString(Category category){
     }
 }
 
-
-//string ClothingItem::getWeather(); const;
-//int ClothingItem::getID() const;
 void ClothingItem::printItem() const{
     std::cout << "Clothing Item: " << std::endl;
     std::cout << "Name: " << name << std::endl;
@@ -93,6 +66,7 @@ void ClothingItem::printItem() const{
     std::cout << "Color: " << colorToString(color) << std::endl;
     std::cout << "Category: " << categoryToString(category) << std::endl;
     std::cout << "Brand: " << brand << std::endl;
+    std::cout << "Price: " << price << std::endl;
     
 }
 
@@ -106,6 +80,8 @@ bool ClothingItem::operator==(const ClothingItem& other) const{
     if (category != other.category)
         return false;
     if (brand != other.brand)
+        return false;
+    if (price != other.price)
         return false;
     
     return true;
