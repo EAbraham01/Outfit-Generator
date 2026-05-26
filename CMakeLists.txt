@@ -23,5 +23,8 @@ target_link_libraries(outfit_app outfit_lib)
 add_executable(tests tests/test_main.cpp)
 target_link_libraries(tests outfit_lib)
 
+# Copy data folder to build directory
+file(COPY ${CMAKE_SOURCE_DIR}/data DESTINATION ${CMAKE_BINARY_DIR})
+
 # Register tests with CTest
 add_test(NAME OutfitTests COMMAND tests)
