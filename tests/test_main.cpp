@@ -92,6 +92,41 @@ void test_display_one_item(){
     w.display();
     cout << "PASSED" << endl;
 }
+
+void test_generate_outfit(){
+    cout << "Testing outfit generator normal case: " << endl;
+    Wardrobe w;
+    User u(Casual, White, "Nike", 200.0);
+    RecommendationSystem rs(w, u);
+    Outfit o = rs.generateOutfit();
+    assert(o.complete() == true);
+    assert(o.hasTop() == true);
+    assert(o.hasBottom() == true);
+    assert(o.hasShoes() == true);
+    cout << "PASSED" << endl;
+}
+
+void test_generate_outfi_low_budget(){
+    cout << "Test outfit generator with too low budget: " << endl;
+    Wardrobe w;
+    User u(Formal, Black, "Zara", 10.0);
+    RecommendationSystem rs(w, u);
+    Outfit o = rs.generateOutfit();
+    assert(o.complete() == false);
+    cout << "PASSED" << endl;
+}
+
+void test_generate_outfit_exact(){
+    cout << "Test outfit generator with a certain budget: " << endl;
+    Wardrobe w;
+    // White Tee costs 15.0, Baggy Jeans cost 45.0, and Air Forces cost 90.0
+    User u(Casual, White, "Nike", 150.0);
+    RecommendationSystem rs(w, u);
+    Outfit o = rs.generateOutfit();
+    assert(o.complete() == true);
+    cout << "PASSED" << endl;
+
+}
 void test_outfit_recommendation(){
     // TODO: Test system can generate an outfit
 }
@@ -106,6 +141,9 @@ int main() {
     test_display_wardrobe_normal();
     test_display_empty();
     test_display_one_item();
+    test_generate_outfit();
+    test_generate_outfi_low_budget();
+    test_generate_outfit_exact();
     cout << endl << "All tests completed." << endl;
     return 0;
 }
