@@ -22,9 +22,9 @@ public:
     void setTop(ClothingItem* t);
     void setBottom(ClothingItem* b);
     void setShoes(ClothingItem* s);
-    void getTop() const;
-    void getBottom() const;
-    void getShoes() const;
+    ClothingItem* getTop() const;
+    ClothingItem* getBottom() const;
+    ClothingItem* getShoes() const;
     bool complete() const;
     bool hasTop() const;
     bool hasBottom() const;

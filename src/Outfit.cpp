@@ -6,41 +6,51 @@ Outfit::Outfit() : top(nullptr), bottom(nullptr), shoes(nullptr), style(Casual){
 Outfit::Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style) : top(t), bottom(b), shoes(s), style(style){};
 
 void Outfit::setTop(ClothingItem* t){
-    std::cout << "[Outfit::setTop] not yet implemented\n";
+    top = t;
 }
 void Outfit::setBottom(ClothingItem* b){
-    std::cout << "[Outfit::setBottom] not yet implemented\n";
+   bottom = b;
 }
 void Outfit::setShoes(ClothingItem* s){
-    std::cout << "[Outfit::setShoes] not yet implemented\n";
+    shoes = s;
 }
-void Outfit::getTop() const{
-    std::cout << "[Outfit::getTop] not yet implemented\n";
+ClothingItem* Outfit::getTop() const{
+    return top;
 }
-void Outfit::getBottom() const{
-    std::cout << "[Outfit::getBottom] not yet implemented\n";
+ClothingItem* Outfit::getBottom() const{
+    return bottom;
 }
-void Outfit::getShoes() const{
-    std::cout << "[Outfit::getShoes] not yet implemented\n";
+ClothingItem* Outfit::getShoes() const{
+    return shoes;
 }
 bool Outfit::complete() const{
     //TODO: Implement later
-    return true;
+    return (hasTop() && hasBottom() && hasShoes());
 }
 bool Outfit::hasTop() const{
     //TODO: Implement later
-    return true;
+    return top != nullptr;
 }
 bool Outfit::hasBottom() const{
     //TODO: Implement later
-    return true;
+    return bottom != nullptr;
 }
 bool Outfit::hasShoes() const{
     //TODO: Implement later
-    return true;
+    return shoes != nullptr;
 }
 void Outfit::display() const{
-    std::cout << "[Outfit::display] not yet implemented\n";
+    if(!complete()){
+        std::cout << "The outfit is incomplete." << std::endl;
+        return;
+    }
+    std::cout << "----Your Outfit----" << std::endl;
+    std::cout << "Top: " << std::endl;
+    top->printItem();
+    std::cout << "Bottom: " << std::endl;
+    bottom->printItem();
+    std::cout << "Shoes: " << std::endl;
+    shoes->printItem();
 }
 ;
 

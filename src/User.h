@@ -13,7 +13,6 @@ private:
     Style prefStyle;
     Color prefColor;
     std::string prefBrand;
-    //std::string prefWeather;
     double budget;
 
 public:
@@ -27,7 +26,7 @@ public:
     
     void setPrefStyle(Style style);
     void setPrefColor(Color color);
-    void setPrefBrand(std::string brand);
+    void setPrefBrand(std::string& brand);
     //void setPrefWeather(std::string weather);
     void setBudget(double budget);
 };

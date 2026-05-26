@@ -28,7 +28,7 @@ void User::setPrefStyle(Style style){
 void User::setPrefColor(Color color){
     std::cout << "[User::setPrefColor] not yet implemented\n";
 }
-void User::setPrefBrand(std::string brand){
+void User::setPrefBrand(std::string& brand){
     std::cout << "[User::setPrefBrand] not yet implemented\n";
 }
 void User::setBudget(double budget){
