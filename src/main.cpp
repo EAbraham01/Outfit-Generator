@@ -13,6 +13,8 @@ int main(){
     int choice;
     bool running = true;
     Wardrobe w;
+    User u (Casual, White, "Nike", 200.0);
+    RecommendationSystem rs(w, u);
     
     while (running) {
         displayMenu();
@@ -74,9 +76,26 @@ int main(){
             w.display();
         }
         else if(choice == 3){
-            // TODO: Ask user for a specific clothing item
-            // TODO: Add item into wardrobe
-            // TODO: Generate rest of outfit from that item using generateFromItem(item)
+            int style;
+            double budget;
+            do {
+                cout << "Style (0=Casual, 1=Formal, 2=Sporty, 3=Streetwear, 4=Vintage): ";
+                cin >> style;
+                if (cin.fail()){
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    style = -1;
+                }
+            } while(style < 0 || style > 4);
+
+            cout << "Max Budget: ";
+            cin >> budget;
+
+            u.setPrefStyle(static_cast<Style>(style));
+            u.setBudget(budget);
+
+            Outfit o = rs.generateOutfit();
+            o.display();
         }
         else if(choice == 4){
             // TODO: Prompt user for a whole outfit
