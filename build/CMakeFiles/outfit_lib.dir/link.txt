@@ -1,2 +1,0 @@
-/usr/bin/ar qc liboutfit_lib.a CMakeFiles/outfit_lib.dir/src/ClothingItem.cpp.o CMakeFiles/outfit_lib.dir/src/Outfit.cpp.o CMakeFiles/outfit_lib.dir/src/User.cpp.o CMakeFiles/outfit_lib.dir/src/Wardrobe.cpp.o CMakeFiles/outfit_lib.dir/src/RecommendationSystem.cpp.o
-/usr/bin/ranlib liboutfit_lib.a

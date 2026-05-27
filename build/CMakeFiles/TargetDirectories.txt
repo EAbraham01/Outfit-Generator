@@ -1,6 +1,0 @@
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/outfit_lib.dir
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/outfit_app.dir
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/tests.dir
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/test.dir
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/edit_cache.dir
-/Users/emi/Desktop/Outfit-Generator/build/CMakeFiles/rebuild_cache.dir
