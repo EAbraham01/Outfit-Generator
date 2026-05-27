@@ -27,7 +27,6 @@ public:
     void setPrefStyle(Style style);
     void setPrefColor(Color color);
     void setPrefBrand(std::string& brand);
-    //void setPrefWeather(std::string weather);
     void setBudget(double budget);
 };
 

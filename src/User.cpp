@@ -6,33 +6,29 @@
 User::User(Style prefStyle, Color prefColor, std::string prefBrand, double budget) : prefStyle(prefStyle), prefColor(prefColor), prefBrand(prefBrand), budget(budget){};
 
 Style User::getPrefStyle() const{
-    //TODO: Implement later
     return prefStyle;
 }
 Color User::getPrefColor() const{
-    //TODO: Implement later
     return prefColor;
 }
 std::string User::getPrefBrand() const{
-    //TODO: Implement later
-    return "";
+    return prefBrand;
 }
 double User::getBudget() const{
-    //TODO: Implement later
     return budget;
 }
     
 void User::setPrefStyle(Style style){
-    std::cout << "[User::setPrefStyle] not yet implemented\n";
+    prefStyle = style;
 }
 void User::setPrefColor(Color color){
-    std::cout << "[User::setPrefColor] not yet implemented\n";
+    prefColor = color;
 }
 void User::setPrefBrand(std::string& brand){
-    std::cout << "[User::setPrefBrand] not yet implemented\n";
+    prefBrand = brand;
 }
 void User::setBudget(double budget){
-    std::cout << "[User::setBudget] not yet implemented\n";
-};
+    this->budget = budget;
+}
 
 
