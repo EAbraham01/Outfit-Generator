@@ -3,6 +3,12 @@
 
 Outfit::Outfit() : top(nullptr), bottom(nullptr), shoes(nullptr), style(Casual){};
 
+Outfit::~Outfit() {
+    delete top;
+    delete bottom;
+    delete shoes;
+}
+
 Outfit::Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style) : top(t), bottom(b), shoes(s), style(style){};
 
 void Outfit::setTop(ClothingItem* t){

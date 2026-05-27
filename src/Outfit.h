@@ -18,6 +18,7 @@ private:
     
 public:
     Outfit();
+    ~Outfit();
     Outfit(ClothingItem* t, ClothingItem* b, ClothingItem* s, Style style);
     void setTop(ClothingItem* t);
     void setBottom(ClothingItem* b);
