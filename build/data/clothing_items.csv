@@ -1,0 +1,53 @@
+name,style,color,price,category,brand
+White Tee,Casual,White,15.0,Top,Pro Club
+Black Tee,Casual,Black,15.0,Top,Pro Club
+Striped Tee,Casual,Blue,20.0,Top,H&M
+Polo Shirt,Casual,White,30.0,Top,Ralph Lauren
+Denim Jacket,Casual,Blue,60.0,Top,Levi
+Hoodie,Casual,Gray,45.0,Top,Champion
+Oxford Shirt,Formal,White,60.0,Top,Calvin Klein
+Dress Shirt,Formal,Blue,70.0,Top,Tommy Hilfiger
+Blazer,Formal,Black,120.0,Top,Hugo Boss
+Turtleneck,Formal,Gray,55.0,Top,Zara
+Compression Tee,Sporty,Black,35.0,Top,Nike
+Dri-Fit Shirt,Sporty,Blue,40.0,Top,Nike
+Quarter Zip,Sporty,Gray,50.0,Top,Under Armour
+Tank Top,Sporty,White,20.0,Top,Adidas
+Graphic Tee,Streetwear,Black,40.0,Top,Supreme
+Hoodie,Streetwear,Black,70.0,Top,Off-White
+Flannel Shirt,Streetwear,Red,45.0,Top,Carhartt
+Oversized Tee,Streetwear,White,35.0,Top,Stussy
+Flannel Shirt,Vintage,Brown,50.0,Top,Levi
+Band Tee,Vintage,Black,30.0,Top,Thrift
+Crewneck Sweater,Vintage,Orange,40.0,Top,Urban Outfitters
+Denim Shirt,Vintage,Blue,45.0,Top,Wrangler
+Baggy Jeans,Casual,Blue,45.0,Bottom,H&M
+Chino Pants,Casual,Beige,50.0,Bottom,Uniqlo
+Shorts,Casual,Gray,25.0,Bottom,Nike
+Cargo Shorts,Casual,Green,30.0,Bottom,Old Navy
+Dress Pants,Formal,Black,80.0,Bottom,Zara
+Suit Pants,Formal,Gray,100.0,Bottom,Hugo Boss
+Slacks,Formal,Navy,75.0,Bottom,Calvin Klein
+Joggers,Sporty,Gray,45.0,Bottom,Adidas
+Track Pants,Sporty,Black,55.0,Bottom,Under Armour
+Sweatpants,Sporty,Blue,40.0,Bottom,Nike
+Cargo Pants,Streetwear,Black,70.0,Bottom,Carhartt
+Baggy Jeans,Streetwear,Black,80.0,Bottom,Levi
+Corduroy Pants,Vintage,Brown,65.0,Bottom,Urban Outfitters
+Wide Leg Jeans,Vintage,Blue,55.0,Bottom,Levi
+Straight Jeans,Vintage,Black,50.0,Bottom,Wrangler
+Air Force 1,Casual,White,90.0,Shoes,Nike
+New Balance 574,Casual,White,80.0,Shoes,New Balance
+Slip On,Casual,Black,50.0,Shoes,Vans
+Derby Shoes,Formal,Black,120.0,Shoes,Clarks
+Oxford Shoes,Formal,Brown,150.0,Shoes,Cole Haan
+Loafers,Formal,Black,110.0,Shoes,Gucci
+Running Shoes,Sporty,White,110.0,Shoes,Adidas
+Sneakers,Sporty,Gray,95.0,Shoes,Puma
+Training Shoes,Sporty,Black,85.0,Shoes,Nike
+Jordan 1,Streetwear,Red,150.0,Shoes,Nike
+Dunk Low,Streetwear,White,100.0,Shoes,Nike
+Yeezy 350,Streetwear,Gray,220.0,Shoes,Adidas
+Converse Chuck,Vintage,White,70.0,Shoes,Converse
+Vans Old Skool,Vintage,Black,65.0,Shoes,Vans
+Doc Martens,Vintage,Brown,140.0,Shoes,Doc Martens
